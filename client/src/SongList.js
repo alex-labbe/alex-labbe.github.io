@@ -1,5 +1,4 @@
 import React,{ Component } from'react';
-import Song from './Song';
 import './App.css'
 
 
@@ -17,7 +16,7 @@ export default function SongList( {topSongs} ){
                 height={100}
             />
             <p>
-                <b>{song["name"]}</b>
+                <b>{song.name}</b>
             </p>
         </li>
         )
