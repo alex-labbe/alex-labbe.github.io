@@ -12,7 +12,7 @@ export default function Poemify( poemData ) {
 
     console.log(songs);
     
-
+    /*
     axios({
         method: 'POST',
         url: "http://localhost:3001/generate",
@@ -23,13 +23,30 @@ export default function Poemify( poemData ) {
         setPoem(response.data.poem);
     }).catch(error => {
         console.log(error);
-    });
-
+    });*/
+    function generate(){
+        axios({
+            method: 'POST',
+            url: "http://localhost:3001/generate",
+            params: {
+                poemData: songs,
+            }
+        }).then((response) =>{
+            setPoem(response.data.poem);
+            //return response.data.poem;
+        }).catch(error => {
+            console.log(error);
+        });
+    }
+    
     
 
     return (
         <div>
-            <><Button variant ="success" onClick={() => setTest(!test)}> start </Button></>
+            <><Button variant ="primary" onClick={() =>
+                setPoem(generate())
+            }>Generate</Button></>
+            
             <p>{poem}</p>
         </div>
     )

@@ -80,10 +80,11 @@ app.post('/generate', async (req, res) => {
     });
 
     openai.post("/chat/completions", {
-        model: "gpt-3.5-turbo",
+        model: "gpt-4",
         messages: [{role: "user", content: prompt}],
     }).then(response => {
-        console.log("generated poem")
+        console.log("generated poem lol")
+        console.log(response.data.choices[0].message.content)
         res.json({  
             poem: response.data.choices[0].message.content,
         })
