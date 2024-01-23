@@ -83,7 +83,12 @@ export default function Dashboard({ code }) {
                 <><Button variant="primary" onClick={() => setTimeFrame("short_term")} >4 weeks</Button></>
                 <><Button variant="secondary" onClick={() => setTimeFrame("medium_term")} >6 months</Button></>
                 <><Button variant="success" onClick={() => setTimeFrame("long_term")} >All time</Button></>
-                <SongList topSongs={topSongs} />
+                <div className='container'>
+                    <div className='component'>
+                        <SongList topSongs={topSongs} />
+                    </div>
+                </div>
+
                 <><Button variant ="dark" onClick={() => setDashLoaded(!dashLoaded)}> start </Button></>
             </div>
         );

@@ -1,7 +1,12 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400");
+body {
+    background-color: #8CC084;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+}
 ul{
     list-style-type: none;
     padding: 0px 10px;
-
 }
 
 li {
@@ -12,3 +17,29 @@ li {
     gap: 30px;
     align-items: center;
 }
+table {
+    border: 2px solid #35605A;
+    border-radius: 20px; /* rounded corners */
+    background-color: #DAEBFB; /* blue background color */
+    border-collapse: separate; 
+}
+th{
+    padding-top: 10px;
+}
+td {
+    padding: 10px 0px 15px 30px;
+}
+img {
+    border: 1px solid #35605A;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.component {
+    width: 75%
+}
+
